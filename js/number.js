@@ -65,6 +65,62 @@ function fibonacci()
     showResult(" fibonacci:"+num+"is:"+output);
     
 }
+ function reverse() {
+    var num = getUserInput();
+    var rev = 0;
+    var r = 0;
+    while(num != 0)
+        {
+            r = num % 10;
+            rev = rev * 10 + r;
+            num=Math.floor( num / 10);
+        }
+     showResult(" reverse of given number is"+rev); 
+}
+
+function pallindrome()
+{
+    var num = getUserInput();
+    var num1 = num;
+    var rev = 0;
+    var r = 0;
+    while(num != 0)
+        {
+            r=num % 10;
+            rev=rev*10+r;
+            num=Math.floor(num/10);
+        }
+    if(rev == num1){
+     showResult(" num is pallindrome:"); }
+    else {
+          showResult(" num is not pallindrome"); }
+     }
+    
+
+function sumofallnum(){
+    var num = getUserInput();
+    var i =0;
+    var sum = 0;
+    while(num != 0)
+        {
+            i = num % 10;
+            sum=sum + i;
+            num = Math.floor(num / 10);
+            
+        }
+    showResult("  sum of all numbers is:"+sum); 
+}  
+function sumsingledigit(){
+    
+    var num = getUserInput();
+    while(num>9)
+        {
+            sum = num % 10 + Math.floor(num / 10) ;
+            num = sum ;
+            
+        }showResult("  sum of given num in single digit is :"+sum);
+    
+}
 function getUserInput(){
     num = document.getElementById("num").value;
     return num;
